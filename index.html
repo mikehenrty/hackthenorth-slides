@@ -305,8 +305,28 @@ startGame();
       </section>
 
 
+        <section>
+          <h2>Let's add progress</h2>
+          <pre><code>function loadNextImage() {
+  if (count === waitingFor) {
+    startGame();
+    return;
+  }
 
+  var img = new Image();
+  img.src = getAnotherImageUrl();
 
+  img.onload = loadNextImage;
+  count++;
+  updateProgressBar(count);
+}
+
+// kick it off
+loadNextImage();
+          </code></pre>
+          <ul><p><a href="./demos/loading-better/index.html">Hmmmmm</a></p></ul>
+          <ul><p><a href="https://github.com/mikehenrty/hackthenorth-slides/tree/master/demos/loading-better">Code</a></p></ul>
+        </section>
 
 
 
