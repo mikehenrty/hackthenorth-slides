@@ -279,6 +279,35 @@ function onParticleComplete(pool, particle) {
       </section>
 
 
+      <section>
+        <h2>Resource Loading</h2>
+        <img style="" class="bullet-image"  src="./img/loading-7b6dc55620a355b55b835f6b4c300f9b.gif" />
+        <ul>
+          <li>HTML5 games aren't packaged</li>
+          <ul><li>they load, just like a webpage</li></ul>
+          <li>Media (images, sounds), load async</li>
+          <ul><li>hard to know when everything is ready</li></ul>
+          <ul><li>especially in JavaScript</li></ul>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>Naive Resource Loading</h2>
+        <pre><code>
+var img = new Image();
+img.onload = function() { console.log('yay?'); }
+img.src = 'http://fake.image.url/cats.png'
+startGame();
+        </code></pre>
+        <ul><p><a href="./demos/loading-basic/index.html">WAT?</a></p></ul>
+        <ul><p><a href="https://github.com/mikehenrty/hackthenorth-slides/tree/master/demos/loading-basic">Code</a></p></ul>
+      </section>
+
+
+
+
+
 
 
 
