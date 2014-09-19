@@ -21,11 +21,10 @@
 
 .reveal .slides section > ul > p > a,
 .reveal .slides section > ol > p > a {
-  font-size: 41px;
+  font-size: 30px;
   font-weight: bold;
   color: rgba(40, 98, 237, 1);
   position: relative;
-  top: 15px;
   right: 30px;
 }
 
