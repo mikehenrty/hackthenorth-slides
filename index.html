@@ -330,6 +330,31 @@ loadNextImage();
 
 
 
+        <section>
+          <h2>smooooooth</h2>
+          <pre><code>
+function onLoadComplete() {
+  count++;
+  updateProgressBar(count);
+  if (count === waitingFor) {
+    startGame();
+  }
+}
+
+function loadImages() {
+  for (var i = 0; i < total; i++) {
+    var img = new Image();
+    img.src = getAnotherImageUrl();
+    img.onload = onLoadComplete;
+  }
+}
+          </code></pre>
+          <ul><p><a href="./demos/loading/index.html">Boom</a></p></ul>
+          <ul><p><a href="https://github.com/mikehenrty/hackthenorth-slides/tree/master/demos/loading">Code</a></p></ul>
+        </section>
+
+
+
 
 
 
