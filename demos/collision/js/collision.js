@@ -53,16 +53,16 @@ Ball.prototype.getCenter = function () {
 
 Ball.prototype.update = function (delta) {
   this.x += (this.vx * delta) / 1000;
-  if (this.x > window.innerWidth - 60) {
-    this.x =  window.innerWidth - 60;
+  if (this.x > window.innerWidth - this.diameter) {
+    this.x =  window.innerWidth - this.diameter;
     this.vx = -this.vx;
   } else if (this.x < 0) {
     this.x = 0;
     this.vx = -this.vx;
   }
   this.y += (this.vy * delta) / 1000;
-  if (this.y > window.innerWidth - 120) {
-    this.y = window.innerWidth - 120;
+  if (this.y > window.innerHeight - this.diameter) {
+    this.y = window.innerHeight - this.diameter;
     this.vy = -this.vy;
   } else if (this.y < 0) {
     this.y = 0;
